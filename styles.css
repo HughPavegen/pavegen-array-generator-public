@@ -1,0 +1,147 @@
+#arrayVisualization {
+  position: relative;
+}
+
+.tile {
+  position: absolute;
+  transition: transform 0.2s; /* Smooth transformation */
+}
+
+.flip-horizontal {
+  transform: scaleX(-1);
+}
+
+.flip-vertical {
+  transform: scaleY(-1);
+}
+body {
+  background-color: #131B20;
+  color: white; /*text */
+  margin: 0;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: 'VisbyCF', sans-serif; /* This sets 'VisbyCF' as the default font for the body */
+  font-weight: normal; /* This will use the VisbyCF-Bold.ttf as the default */
+  color: white; /* Sets the default text color to white */
+  background-image: url(/assets/Gradient-background.png);
+  background-size: cover; /* This will cover the entire page without repeating */
+  background-position: center; /* This centers the background image */
+
+}
+
+#gridContainer { 
+  border: 5px solid lightgrey; /* Border around the entire grid */
+  display: inline-block;
+  flex-wrap: wrap; /* This will ensure that the rows are treated as a continuous sequence */
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: -2.5px; /* Adjust for the border's visual effect if needed */
+  margin-top: 15px;
+}
+
+#gridContainer > div {
+  flex: 0 0 100%; /* This ensures that the div elements (rows) take the full width of the gridContainer */
+  display: inline-block;
+  justify-content: flex-start;
+}
+
+#gridContainer img {
+  display: block;
+  margin: 0; /* Remove margin to make the tiles connect seamlessly */
+  padding: 0; /* Remove padding to make the tiles connect seamlessly */
+  /* Other img styles */
+}
+
+.slider-container {
+  display: flex;
+  justify-content: space-between; /* Adjust the space between slider groups */
+}
+
+.slider-group {
+  display: flex;
+  flex-direction: column; /* Stack the inputs vertically */
+  align-items: left; /* Center-align the items */
+  padding: 10px; /* Add some space around each group */
+}
+
+.slider-group label {
+  margin-top: 10px; /* Add some space above the label */
+  font-weight: bold;
+}
+
+#lengthSlider,
+#widthSlider{
+  
+margin-bottom: 10px;
+background: #00f596;
+color: #00f596;
+
+}
+#lengthInput,
+#widthInput {
+  margin-bottom: 10px; /* Adds separation between sliders and the grid */
+  background-color: #00f59765; /* Dark grey background */
+  color: white; /* If you want the text color to be white */
+  border: 1px solid #00f596;
+  border-radius: 5px;
+}
+.properties-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  margin-bottom: 20px; /* Adds space between the table and the grid */
+}
+
+.properties-table th, .properties-table td {
+  border: 1px solid white;
+  text-align: left;
+  padding: 8px;
+  color: white; /* Ensures text is white */
+}
+
+.properties-table th {
+  background-color: #131B20;
+}
+@font-face {
+  font-family: 'VisbyCF';
+  src: url('TTF/VisbyCF-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VisbyCF';
+  src: url('TTF/VisbyCF-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+#downloadButton {
+  background-color: #00f596; /* Button color */
+  color: #131B20; /* Text color */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded edges */
+  cursor: pointer; /* Cursor to indicate it's clickable */
+  outline: none; /* Remove focus outline */
+  margin-bottom: 10px; /* Space below the button */
+  margin-top: 10px;
+}
+
+#downloadButton:hover {
+  background-color: #00f59791; /* Slightly lighter color on hover */
+}
+
+#logoContainer {
+  text-align: center; /* Center the logo horizontally */
+  padding: 20px; /* Add some space around the logo */
+}
+
+#logo {
+  width: 80px; /* Set the width of your logo */
+  height: auto; /* Keep the aspect ratio */
+  margin-left: -16px;
+}

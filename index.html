@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pavegen Array Configurator - V1</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<!--  -->
+</head>
+<body>
+
+  <div id="logoContainer">
+    <img id="logo" src="assets/Pavegen-logo.png" alt="Logo">
+  </div>
+
+ <button id="downloadButton">Download Configuration</button>
+
+ <div class="slider-container">
+  <div class="slider-group">
+    <label for="lengthInput">Tiles long</label>
+    <input type="range" id="lengthSlider" min="2" max="20" value="10">
+    <input type="text" id="lengthInput" value="10">
+  </div>
+  
+  <div class="slider-group">
+    <label for="widthInput">Tiles wide</label>
+    <input type="range" id="widthSlider" min="2" max="10" value="5">
+    <input type="text" id="widthInput" value="5">
+  </div>
+</div>
+  
+  <div class="properties-table">
+    <table>
+      <tr>
+        <th>Tiles Long</th>
+        <th>Tiles Wide</th>
+        <th>Length (m)</th>
+        <th>Width (m)</th>
+        <th>Area (m2)</th>
+        <th># Generators</th>
+        <th># Full Tiles</th>
+        <th># 1/2 tiles</th>
+      </tr>
+      <tr>
+        <td id="tilesLong">-</td>
+        <td id="tilesWide">-</td>
+        <td id="lengthM">-</td>
+        <td id="widthM">-</td>
+        <td id="areaM2">-</td>
+        <td id="numGenerators">-</td>
+        <td id="fullTiles">-</td>
+        <td id="halfTiles">-</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="gridContainer"></div>
+
+  <script src="renderer.js"></script>
+</body>
+</body>
+</html>
